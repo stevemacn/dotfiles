@@ -19,6 +19,12 @@ Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'bogado/file-line.git'
 
+"Tabline"
+Bundle 'majutsushi/tagbar'
+Bundle 'bling/vim-airline.git'
+
+set laststatus=2
+
 " Syntax
 " ====
 Bundle 'altercation/vim-colors-solarized'
@@ -75,6 +81,8 @@ set expandtab
 set sw=4
 set ts=4
 set smarttab
+
+set number 
 
 set ai
 set si
@@ -133,6 +141,7 @@ endif
 
 let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+
 
 
 "
