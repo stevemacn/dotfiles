@@ -80,6 +80,7 @@ set novisualbell
 set expandtab
 set sw=4
 set ts=4
+set background=2
 set smarttab
 
 set number 
