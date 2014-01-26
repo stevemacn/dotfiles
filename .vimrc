@@ -1,3 +1,5 @@
+" vimrc for @stevemacn, ask on github for help/issues
+
 set nocompatible               " be iMproved
 filetype off                   " required!
 
@@ -60,6 +62,12 @@ Bundle 'jamescarr/snipmate-nodejs'
 "====
 Bundle 'godlygeek/tabular'
 
+"Beautfy my js 
+"====
+Bundle 'maksimr/vim-jsbeautify'
+Bundle 'einars/js-beautify'
+map <c-j> :call JsBeautify()<cr>
+
 
 "Installation
 "1. Delete bundle/snipmate.vim/snippets because we will use another updated snippets
@@ -80,8 +88,8 @@ set novisualbell
 set expandtab
 set sw=4
 set ts=4
-set background=2
 set smarttab
+set backspace=2
 
 set number 
 
@@ -120,7 +128,6 @@ let g:neocomplcache_min_syntax_length = 4
 
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown,ctp setlocal omnifunc=htmlcomplete#CompleteTags
-"autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType javascript :setl omnifunc=jscomplete#CompleteJS 
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
@@ -133,8 +140,6 @@ let g:neocomplcache_dictionary_filetype_lists = {
      \ 'javascript' : $HOME.'/.vim/dict/javascript.dict',
      \}
 
-
-
 " Enable heavy omni completion.
 if !exists('g:neocomplcache_omni_patterns')
    let g:neocomplcache_omni_patterns = {}
@@ -143,14 +148,10 @@ endif
 let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 
-
-
-"
 " Brief help
 " :BundleList          - list configured bundles
 " :BundleInstall(!)    - install(update) bundles
 " :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-"
+" :BundleClean(!)      - confirm(or auto-approve) removal of old bunldes"
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle command are not allowed..
