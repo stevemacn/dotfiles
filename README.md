@@ -3,7 +3,7 @@ Setup
 
 As with everything else, this requires git!
 
-    git clone git@github.com:stevemacn/dotfiles.git
+    git clone https://github.com/stevemacn/dotfiles
 
 vim
 ---
@@ -16,3 +16,15 @@ zsh
 ---
 
 To Do
+
+app config
+---
+
+{appname} should be the name of your app (do not type brackets!)
+
+    mv config /etc/init.d/{appname}
+    chmod 700 /etc/init.d/{appname}
+    vim /etc/init.d/appname  //change to your specific configuration
+    
+    service {appname} start 
+
