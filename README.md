@@ -27,4 +27,10 @@ app config
     vim /etc/init.d/appname  //change to your specific configuration
     
     service {appname} start 
+    
+Debugging
+---
+
+Make sure iterm 2 has solarized as it's default colors.
+    
 
